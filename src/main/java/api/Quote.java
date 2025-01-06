@@ -28,7 +28,7 @@ public class Quote {
   private Boolean dialogue;
 
   @JsonProperty("private")
-  private Boolean isPrivate;
+  private Boolean aPrivate;
 
   private String author;
   private String url;
@@ -46,7 +46,7 @@ public class Quote {
       Integer upvotesCount,
       Integer downvotesCount,
       Boolean dialogue,
-      Boolean isPrivate,
+      Boolean aPrivate,
       String author,
       String url,
       String source) {
@@ -59,7 +59,7 @@ public class Quote {
     this.upvotesCount = upvotesCount;
     this.downvotesCount = downvotesCount;
     this.dialogue = dialogue;
-    this.isPrivate = isPrivate;
+    this.aPrivate = aPrivate;
     this.author = author;
     this.url = url;
     this.source = source;
@@ -101,8 +101,9 @@ public class Quote {
     return dialogue;
   }
 
-  public Boolean getIsPrivate() {
-    return isPrivate;
+  @JsonProperty("private")
+  public Boolean getAPrivate() {
+    return aPrivate;
   }
 
   public String getAuthor() {
@@ -153,8 +154,9 @@ public class Quote {
     this.dialogue = dialogue;
   }
 
-  public void setIsPrivate(Boolean aPrivate) {
-    isPrivate = isPrivate;
+  @JsonProperty("private")
+  public void setAPrivate(Boolean aPrivate) {
+    aPrivate = aPrivate;
   }
 
   public void setAuthor(String author) {
